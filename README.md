@@ -1,116 +1,145 @@
-# 🎤 Transcript Live Dashboard
+# 🎙️ Transcript Live
 
-Een moderne React applicatie voor live transcriptie van gesprekken met een gebruiksvriendelijke interface.
+**Real-time transcriptie met achteraf AI Speaker Diarization**
 
-## ✨ Functies
+Een webapplicatie die live audio opneemt, transcribeert en automatisch verschillende sprekers identificeert met behulp van AI.
 
-- **Live Opname**: Start en stop audio-opnames met één klik
-- **Real-time Transcriptie**: Zie direct wat er wordt gezegd (momenteel gesimuleerd)
-- **Pauzeren/Hervatten**: Controleer de opname wanneer gewenst
-- **Statistieken**: Bijhouden van opnametijd, woorden en zinnen
-- **Download Transcript**: Sla transcripties op als tekstbestand
-- **Moderne UI**: Mooie, responsive interface met gradient design
+## ✨ Features
 
-## 🚀 Installatie
+- 🎤 **Live Audio Recording** - Neem audio op in real-time
+- 📝 **Real-time Transcriptie** - Zie tekst terwijl je spreekt
+- 🤖 **AI Speaker Diarization** - Automatische spreker herkenning
+- 📊 **Statistieken** - Totaal sprekers, regels en woorden
+- 📄 **Download Opties** - Exporteer als Word (.docx) of TXT bestand
+- 🎨 **Moderne UI** - Gebruiksvriendelijke interface
 
-1. **Installeer dependencies:**
-   ```bash
-   npm install
-   ```
+## 🚀 Quick Start
 
-2. **Start de development server:**
-   ```bash
-   npm start
-   ```
+### Stap 1: Download het Project
 
-3. **Open je browser:**
-   De app opent automatisch op `http://localhost:3000`
-
-## 🎯 Gebruik
-
-### Basis Gebruik
-1. **Start Opname**: Klik op de groene "Start Opname" knop
-2. **Geef microfoon-toegang**: Je browser vraagt om toegang tot je microfoon
-3. **Begin met praten**: De transcriptie verschijnt live in het tekstvak
-4. **Stop Opname**: Klik op de rode "Stop Opname" knop
-
-### Extra Functies
-- **Pauzeren**: Gebruik de pauze-knop om de opname tijdelijk te stoppen
-- **Download**: Sla je transcript op als .txt bestand
-- **Statistieken**: Bekijk opnametijd, aantal woorden en zinnen
-
-## 🏗️ Project Structuur
-
+```bash
+git clone https://github.com/SandrinePr/live-transcript.git
+cd live-transcript
 ```
-transcript-live-dashboard/
-├── public/
-│   └── index.html          # Hoofd HTML bestand
-├── src/
-│   ├── App.js              # Hoofd React component
-│   └── index.js            # App entry point
-├── package.json            # Dependencies en scripts
-└── README.md               # Deze documentatie
+
+### Stap 2: Installeer Dependencies
+
+**Frontend (React):**
+```bash
+npm install
 ```
+
+**Backend (Python):**
+```bash
+pip install -r requirements.txt
+```
+
+### Stap 3: Start de Applicatie
+
+**Optie A: Automatisch (Windows)**
+```bash
+start_backend.bat
+```
+
+**Optie B: Handmatig**
+
+1. **Start Backend:**
+```bash
+python server.py
+```
+
+2. **Start Frontend (nieuwe terminal):**
+```bash
+npm start
+```
+
+### Stap 4: Open de App
+
+Ga naar: **http://localhost:3000**
+
+## 📋 Systeemvereisten
+
+- **Node.js** (versie 14 of hoger)
+- **Python** (versie 3.8 of hoger)
+- **Microfoon** (voor audio opname)
+- **Moderne browser** (Chrome, Firefox, Safari, Edge)
+
+## 🎯 Hoe te Gebruiken
+
+1. **Klik op "Start Recording"** om audio op te nemen
+2. **Spreek duidelijk** - de app transcribeert live
+3. **Klik op "Stop Recording"** om te stoppen
+4. **Wacht op AI verwerking** - sprekers worden automatisch herkend
+5. **Download resultaat** - kies tussen Word of TXT formaat
 
 ## 🔧 Technische Details
 
 ### Frontend
-- **React 18** - Moderne React met hooks
-- **Styled Components** - CSS-in-JS styling
-- **Lucide React** - Moderne iconen
-- **Responsive Design** - Werkt op alle schermformaten
+- **React** - Moderne web interface
+- **Web Speech API** - Real-time transcriptie
+- **Styled Components** - Mooie styling
+- **Docx Library** - Word document generatie
 
-### Audio Opname
-- **MediaRecorder API** - Browser-native audio opname
-- **Real-time Processing** - Audio wordt direct verwerkt
-- **Microfoon Toegang** - Vraagt om microfoon permissies
+### Backend
+- **FastAPI** - Snelle Python API
+- **librosa** - Audio feature extraction
+- **scikit-learn** - AI speaker clustering
+- **KMeans** - Machine learning algoritme
 
-### Transcriptie (Momenteel Gesimuleerd)
-- **Demo Modus**: Toont voorbeeldtekst elke 3 seconden
-- **Real-time Updates**: Tekst verschijnt direct tijdens opname
-- **Voorbereid voor Integratie**: Klaar voor echte speech-to-text
+### AI Speaker Diarization
+- **MFCC Features** - Audio karakteristieken
+- **Spectral Analysis** - Frequentie analyse
+- **Chroma Features** - Toonhoogte detectie
+- **RMS Energy** - Volume detectie
+- **KMeans Clustering** - Spreker groepering
 
-## 🚧 Toekomstige Uitbreidingen
+## 📁 Project Structuur
 
-- **Echte Speech-to-Text**: Integratie met Whisper of andere STT services
-- **Sprekerherkenning**: Identificeer verschillende sprekers
-- **Audio Opslag**: Sla opgenomen audio op voor latere verwerking
-- **Export Opties**: PDF, Word, of andere formaten
-- **Cloud Opslag**: Synchroniseer transcripties tussen apparaten
+```
+live-transcript/
+├── src/
+│   ├── App.js          # Hoofd React component
+│   └── index.js        # React entry point
+├── public/
+│   └── index.html      # HTML template
+├── server.py           # Python backend
+├── requirements.txt    # Python dependencies
+├── package.json        # Node.js dependencies
+└── start_backend.bat   # Windows start script
+```
 
-## 🎨 UI/UX Features
+## 🐛 Troubleshooting
 
-- **Gradient Design**: Moderne kleurenschema's
-- **Smooth Animations**: Hover effecten en transitions
-- **Status Indicators**: Duidelijke feedback over opnamestatus
-- **Responsive Layout**: Werkt perfect op desktop en mobiel
-- **Accessibility**: Goede contrast en leesbaarheid
+### Backend start niet
+- Controleer of Python geïnstalleerd is
+- Installeer dependencies: `pip install -r requirements.txt`
+- Controleer of poort 3001 vrij is
 
-## 🐛 Bekende Limitaties
+### Frontend start niet
+- Controleer of Node.js geïnstalleerd is
+- Installeer dependencies: `npm install`
+- Controleer of poort 3000 vrij is
 
-- **Transcriptie is Gesimuleerd**: Momenteel geen echte speech-to-text
-- **Browser Compatibiliteit**: Vereist moderne browser met MediaRecorder support
-- **Microfoon Vereist**: App werkt alleen met microfoon-toegang
+### Geen audio opname
+- Controleer microfoon permissies in browser
+- Gebruik HTTPS of localhost
+- Test microfoon in andere apps
 
-## 📱 Browser Ondersteuning
+### AI werkt niet
+- Controleer backend logs voor errors
+- Zorg dat audio langer dan 2 seconden is
+- Controleer Python dependencies
 
-- ✅ Chrome 66+
-- ✅ Firefox 60+
-- ✅ Safari 14.1+
-- ✅ Edge 79+
+## 📞 Support
 
-## 🤝 Bijdragen
-
-Dit is een demo project. Voor productie gebruik wordt aanbevolen om:
-- Echte speech-to-text integratie toe te voegen
-- Error handling te verbeteren
-- Unit tests toe te voegen
-- Performance te optimaliseren
+Voor vragen of problemen:
+- **GitHub Issues**: [Maak een issue aan](https://github.com/SandrinePr/live-transcript/issues)
+- **Email**: [Je email hier]
 
 ## 📄 Licentie
 
-Dit project is open source en beschikbaar onder de MIT licentie.
+Dit project is open source. Zie LICENSE bestand voor details.
 
 ---
 
-**Gemaakt met ❤️ voor live transcriptie doeleinden**
+**🎉 Veel plezier met Transcript Live!**
