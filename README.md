@@ -72,6 +72,36 @@ Ga naar: **http://localhost:3000**
 4. **Wacht op AI verwerking** - sprekers worden automatisch herkend
 5. **Download resultaat** - kies tussen Word of TXT formaat
 
+## 🔄 Hoe het Werkt
+
+### **Fase 1: Live Opname & Transcriptie**
+- 🎤 **Audio Opname**: Je microfoon neemt real-time audio op
+- 📝 **Live Transcriptie**: Web Speech API zet spraak direct om naar tekst
+- 👁️ **Real-time Weergave**: Je ziet de tekst verschijnen terwijl je spreekt
+- ⏱️ **Timestamps**: Elke tekstregel krijgt een tijdstempel
+
+### **Fase 2: AI Speaker Diarization (Na Opname)**
+- 🎵 **Audio Analyse**: De opgenomen audio wordt geanalyseerd door AI
+- 🧠 **Feature Extraction**: AI extraheert audio kenmerken (MFCCs, frequenties, volume)
+- 👥 **Spreker Detectie**: KMeans algoritme groepeert audio segmenten per spreker
+- 🎨 **Kleurcodering**: Elke spreker krijgt een unieke kleur in de interface
+- 📊 **Statistieken**: Totaal aantal sprekers, regels en woorden worden berekend
+
+### **Fase 3: Resultaat & Export**
+- 📄 **Geformatteerde Transcript**: Tekst wordt gegroepeerd per spreker
+- 💾 **Download Opties**: Exporteer als professioneel Word document of TXT bestand
+- 📈 **Statistieken**: Volledige rapportage met datum, tijd en metrics
+
+### **Voorbeeld Workflow:**
+```
+1. Start Recording → "Hallo, dit is Jan"
+2. Live Transcript → "Hallo, dit is Jan" (verschijnt direct)
+3. Stop Recording → Audio wordt opgeslagen
+4. AI Processing → Analyseert wie "Jan" is vs andere sprekers
+5. Resultaat → "Persoon 1: Hallo, dit is Jan"
+6. Download → Professioneel rapport met alle sprekers
+```
+
 ## 🔧 Technische Details
 
 ### Frontend
