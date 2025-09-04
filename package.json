@@ -1,0 +1,40 @@
+{
+  "name": "transcript-live-2.0",
+  "version": "1.0.0",
+  "description": "Real-time transcriptie met AI Speaker Diarization",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "backend": "node server.js",
+    "dev": "concurrently \"npm run backend\" \"npm start\""
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "docx": "^8.2.2",
+    "express": "^4.18.2",
+    "lucide-react": "^0.542.0",
+    "node-fetch": "^2.6.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "styled-components": "^6.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
