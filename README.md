@@ -166,16 +166,5 @@ live-transcript/
 - Zorg dat audio langer dan 2 seconden is
 - Controleer Python dependencies
 
-## 📞 Support
-
-Voor vragen of problemen:
-- **GitHub Issues**: [Maak een issue aan](https://github.com/SandrinePr/live-transcript/issues)
-- **Email**: [Je email hier]
-
-## 📄 Licentie
-
-Dit project is open source. Zie LICENSE bestand voor details.
-
----
 
 **🎉 Veel plezier met Transcript Live!**
