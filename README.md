@@ -132,10 +132,16 @@ live-transcript/
 │   └── index.js        # React entry point
 ├── public/
 │   └── index.html      # HTML template
+├── __pycache__/        # Python cache (automatisch gegenereerd)
+├── node_modules/       # Node.js dependencies (automatisch gegenereerd)
 ├── server.py           # Python backend
 ├── requirements.txt    # Python dependencies
 ├── package.json        # Node.js dependencies
-└── start_backend.bat   # Windows start script
+├── package-lock.json   # Node.js lock file
+├── start_backend.bat   # Windows start script
+├── .gitignore          # Git ignore regels
+├── README.md           # Project documentatie
+└── BACKEND_README.md   # Backend specifieke documentatie
 ```
 
 ## 🐛 Troubleshooting
